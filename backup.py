@@ -34,7 +34,7 @@ def backup_database():
 
 schedule.every().day.at("00:00").do(backup_database)
 
-print("🕛 Đang chạy dịch vụ backup. Chờ đến 00:00...")
+print(" Đang chạy dịch vụ backup. Chờ đến 00:00...")
 while True:
     schedule.run_pending()
     time.sleep(60)
