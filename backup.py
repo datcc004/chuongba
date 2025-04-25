@@ -23,10 +23,10 @@ def backup_database():
         try:
             with open(db_file, 'rb') as fsrc, open(backup_path, 'wb') as fdst:
                 fdst.write(fsrc.read())
-            messages.append(f"✅ Đã backup: {db_file}")
+            messages.append(f" Đã backup: {db_file}")
         except Exception as e:
             success = False
-            messages.append(f"❌ Lỗi backup {db_file}: {e}")
+            messages.append(f" Lỗi backup {db_file}: {e}")
 
     subject = "Backup thành công" if success else "Backup hoàn thành nhưng có lỗi"
     body = "\n".join(messages)
